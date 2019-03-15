@@ -17,3 +17,10 @@
 
 import 'bootstrap';
 console.log('Hello World from Webpacker')
+const formNewIngredient = document.querySelector('.new-ingredient-form');
+
+const buttonNewIngredient = document.querySelector('.btn-new-dose');
+buttonNewIngredient.addEventListener(("click"), (event) => {
+  buttonNewIngredient.style.display = 'none';
+  formNewIngredient.classList.remove("hide");
+});

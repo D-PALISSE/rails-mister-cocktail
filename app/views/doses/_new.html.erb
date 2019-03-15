@@ -1,5 +1,4 @@
-<div style="margin: 40px 600px; background color: rgba(220, 220, 220, 0.8);">
-<h1>Create a new dose</h1>
+<div class="new-ingredient-form hide">
 <%= simple_form_for [@cocktail, @dose] do |f| %>
   <div class="form-inputs">
     <%= f.input :description %>
@@ -7,7 +6,8 @@
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, 'Save', class: 'btn btn-primary' %>
+    <%= f.button :submit, 'Save', class: 'btn btn-info' %>
+    <%= link_to "Cancel", cocktail_path(@cocktail), class: 'btn btn-info' %>
   </div>
 <% end %>
 </div>

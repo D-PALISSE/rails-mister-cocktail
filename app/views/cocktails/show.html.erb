@@ -3,9 +3,12 @@
   Cocktails <span id="ylw-color"><i class="fas fa-cocktail"></i></span>
   <% end %>
 </div></center>
+
 <div class="wrapper-centered">
   <div class="arrow-prev">
-    <i class="fas fa-angle-left"></i>
+    <%= link_to cocktail_path(@cocktail.id - 1) do %>
+      <i class="fas fa-angle-left"></i>
+    <% end %>
   </div>
   <div class="cocktail-title">
   <%= image_tag @cocktail.image, class: "logo-cock" %>
@@ -18,10 +21,13 @@
     <li class= "doses-description"><i class="fas fa-cube"></i>&nbsp &nbsp<%= dose.ingredient.name %> : <%= dose.description%></li>
   <% end %>
 </ul>
-<%= link_to "add a new ingredient", new_cocktail_dose_path(@cocktail), class: "btn btn-info" %>
+<button type="button" class="btn btn-info btn-new-dose">add a new ingredient</button>
+<%= render 'doses/new' %>
 </div>
-<div class="arrow-next">
+<div class="arrow-prev">
+  <%= link_to cocktail_path(@cocktail.id+1) do %>
     <i class="fas fa-angle-right"></i></i>
+  <% end %>
   </div>
 </div>
 <center>

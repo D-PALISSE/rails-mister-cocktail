@@ -1,13 +1,15 @@
-<div style="margin: 40px 400px;">
+<div class="container new-cocktail-form" style="margin: 40px 400px;">
 <h1>Create a new cocktail</h1>
 <%= simple_form_for(@cocktail) do |f| %>
   <div class="form-inputs">
     <%= f.input :name %>
+    <%= f.label :image, "Image URL" %>
+    <%= f.input :image, label: false %>
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, 'Save', class: 'btn btn-primary' %>
-    <%= link_to 'Cancel', (@cocktail.new_record? ? cocktails_path : cocktail_path(cocktail)), class: 'btn btn-link' %>
+    <%= f.button :submit, 'Save', class: 'btn btn-info' %>
+    <%= link_to 'Cancel', (@cocktail.new_record? ? cocktails_path : cocktail_path(cocktail)), class: 'btn btn-info' %>
   </div>
 <% end %>
 </div>

@@ -55,17 +55,19 @@
 }
 
 .arrow-prev {
-  font-size: 60px;
+  a {font-size: 60px;
   color: rgba(250, 250, 250, 0.3);
-  &:hover {
+}
+  a:hover {
       color: rgba(250, 250, 250, 0.8);
   }
 }
 
 .arrow-next {
-  font-size: 60px;
+  a {font-size: 60px;
   color: rgba(250, 250, 250, 0.3);
-  &:hover {
+}
+  a:hover {
       color: rgba(250, 250, 250, 0.8);
   }
 }
@@ -74,3 +76,16 @@
 //   &:hover {
 // background-image: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9))  }
 //  }
+
+.new-ingredient-form {
+  width: 300px;
+  color: white;
+}
+
+.hide {
+  display: none;
+}
+
+.new-cocktail-form {
+  color: white;
+}
