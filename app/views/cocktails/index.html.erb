@@ -1,8 +1,20 @@
-<h1>Cocktails</h1>
-<div class="card">
+<center><div class="navbar-cocktails">
+  <%= link_to cocktails_path do %>
+  Cocktails <span id="ylw-color"><i class="fas fa-cocktail"></i></span>
+  <% end %>
+</div></center>
+<div class="container mt-5">
+  <div class="cards">
   <% @cocktails.each do |cocktail| %>
-    <%= link_to cocktail.name, cocktail_path(cocktail) %>
+    <%= link_to cocktail_path(cocktail), class: "cocktail-link" do %>
+      <div class="card-category" id="black-bg" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(<%= cocktail.image %>)">
+    </div>
+    <%end%>
   <% end %>
 </div>
-<br>
-<%= link_to "New cocktail", new_cocktail_path %>
+<br><center><div class=" container footer-newcock">
+<%= link_to new_cocktail_path, class: "btn btn-primary mt-5 newcock-btn" do %>
+  <i class="fas fa-plus"></i> &nbsp &nbsp make your own cocktail <i class="fas fa-cocktail"></i>
+<%end%>
+</div></center>
+</div>

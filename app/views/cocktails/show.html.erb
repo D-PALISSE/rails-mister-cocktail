@@ -1,9 +1,31 @@
-<h1><%= @cocktail.name %></h1>
-<br>
+<center><div class="navbar-cocktails">
+  <%= link_to cocktails_path do %>
+  Cocktails <span id="ylw-color"><i class="fas fa-cocktail"></i></span>
+  <% end %>
+</div></center>
+<div class="wrapper-centered">
+  <div class="arrow-prev">
+    <i class="fas fa-angle-left"></i>
+  </div>
+  <div class="cocktail-title">
+  <%= image_tag @cocktail.image, class: "logo-cock" %>
+</div>
+
+<div class="cock-ingre">
+  <h1><%= @cocktail.name %></h1>
 <ul>
   <% @cocktail.doses.each do |dose| %>
-    <li><%= dose.ingredient.name %> : <%= dose.description %></li>
+    <li class= "doses-description"><i class="fas fa-cube"></i>&nbsp &nbsp<%= dose.ingredient.name %> : <%= dose.description%></li>
   <% end %>
 </ul>
-<%= link_to "add a new ingredient", new_cocktail_dose_path(@cocktail), class: "btn btn-primary" %>
-<%= link_to "back to cocktails list", cocktails_path, class: "btn btn-primary" %>
+<%= link_to "add a new ingredient", new_cocktail_dose_path(@cocktail), class: "btn btn-info" %>
+</div>
+<div class="arrow-next">
+    <i class="fas fa-angle-right"></i></i>
+  </div>
+</div>
+<center>
+<%= link_to cocktails_path, class: "back-link" do %>
+<i class="fas fa-arrow-left fleche-gauche"></i> &nbsp &nbsp back to cocktails list
+<%end%>
+</center>
