@@ -6,6 +6,10 @@ class CocktailsController < ApplicationController
   def show
     @cocktail = Cocktail.find(params[:id])
     @dose = Dose.new
+
+    cocktails = Cocktail.all
+    @cocktails_array = []
+    cocktails.each { |cocktail| @cocktails_array << cocktail }
   end
 
   def new
