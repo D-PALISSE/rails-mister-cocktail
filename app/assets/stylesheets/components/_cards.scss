@@ -45,13 +45,24 @@
   width: 280px;
   background-size: 180%;
   border-radius: 8px;
+  position: absolute;
+  z-index: 10;
 }
 
 .card-container {
-  display: block;
+  display: flex;
   height: 280px;
   width: 280px;
   background-size: 180%;
   border-radius: 8px;
-  background-color: black;
+  background-color: rgba(10, 10, 10, 0);
+  position: absolute;
+  z-index: 20;
+  color: rgba(10, 10, 10, 0);
+  align-items: center;
+  justify-content: center;
+  &:hover {
+    background-color: rgba(10, 10, 10, 0.8);
+    color: white;
+  }
 }

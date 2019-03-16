@@ -12,9 +12,9 @@
   </div>
   <div class="cocktail-title">
   <% if @cocktail.image.empty? %>
-  <%= cl_image_tag @cocktail.photo, class: "logo-cock" %>
+  <%= cl_image_tag @cocktail.photo, height: 500, width: 750, crop: :fill %>
   <% else %>
-  <%= cl_image_tag @cocktail.image, class: "logo-cock" %>
+  <%= cl_image_tag @cocktail.image, height: 500, width: 750, crop: :fill %>
   <% end %>
 </div>
 

@@ -1,7 +1,8 @@
 // Specific CSS for your home-page
 
-  h1 {
+  h1, h2, h3 {
     color: white;
+    font-family: 'Montserrat', sans-serif
   }
 
 .wrapper-centered {
@@ -88,4 +89,9 @@
 
 .new-cocktail-form {
   color: white;
+}
+
+.cocktail-name-index {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2em;
 }

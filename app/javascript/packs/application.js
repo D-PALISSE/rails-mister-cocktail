@@ -24,3 +24,9 @@ buttonNewIngredient.addEventListener(("click"), (event) => {
   buttonNewIngredient.style.display = 'none';
   formNewIngredient.classList.remove("hide");
 });
+
+const divBlockIndex = document.querySelector('.card-container');
+
+divBlockIndex.addEventListener(("mouseover"), (event) => {
+    divBlockIndex.insertAdjacentHTML('afterbegin', '<h1>blabla</h1>');
+});
