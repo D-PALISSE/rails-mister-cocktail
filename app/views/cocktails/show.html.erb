@@ -6,7 +6,7 @@
 
 <div class="wrapper-centered">
   <div class="arrow-prev">
-    <%= link_to cocktail_path(@cocktail.id - 1) do %>
+    <%= link_to cocktail_path(@cocktails[@cocktails.index(@cocktail)-1]) do %>
       <i class="fas fa-angle-left"></i>
     <% end %>
   </div>
@@ -25,8 +25,14 @@
 <%= render 'doses/new' %>
 </div>
 <div class="arrow-prev">
-  <%= link_to cocktail_path(@cocktail.id+1) do %>
-    <i class="fas fa-angle-right"></i></i>
+  <% if (@cocktails[@cocktails.index(@cocktail)+1]).nil? %>
+    <%= link_to cocktail_path(@cocktails[0]) do %>
+        <i class="fas fa-angle-right"></i>
+    <% end %>
+  <% else %>
+    <%= link_to cocktail_path(@cocktails[@cocktails.index(@cocktail)+1]) do %>
+      <i class="fas fa-angle-right"></i>
+    <% end %>
   <% end %>
   </div>
 </div>

@@ -8,13 +8,12 @@ class CocktailsController < ApplicationController
     @dose = Dose.new
 
     cocktails = Cocktail.all
-    @cocktails_array = []
-    cocktails.each { |cocktail| @cocktails_array << cocktail }
+    @cocktails = []
+    cocktails.each { |cocktail| @cocktails << cocktail }
   end
 
   def new
     @cocktail = Cocktail.new
-
   end
 
   def create
