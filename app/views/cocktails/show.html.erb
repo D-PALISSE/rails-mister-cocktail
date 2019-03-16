@@ -22,7 +22,15 @@
   <h1><%= @cocktail.name %></h1>
 <ul>
   <% @cocktail.doses.each do |dose| %>
-    <li class= "doses-description"><i class="fas fa-cube"></i>&nbsp &nbsp<%= dose.ingredient.name %> : <%= dose.description%></li>
+    <li class= "doses-description">
+      <% if dose.ingredient.name == "ice" %>
+        <i class="fas fa-cube"></i>
+      <% elsif dose.ingredient.name == "mint leaves" %>
+        <i class="fab fa-pagelines"></i>
+      <% elsif dose.ingredient.name == "lemon" %>
+        <i class="far fa-lemon"></i>
+      <% end %>
+      &nbsp &nbsp<%= dose.ingredient.name %> : <%= dose.description%></li>
   <% end %>
 </ul>
 <button type="button" class="btn btn-info btn-new-dose">add a new ingredient</button>
