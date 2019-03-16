@@ -45,8 +45,6 @@
   width: 280px;
   background-size: 180%;
   border-radius: 8px;
-  position: absolute;
-  z-index: 10;
 }
 
 .card-container {
@@ -57,7 +55,6 @@
   border-radius: 8px;
   background-color: rgba(10, 10, 10, 0);
   position: absolute;
-  z-index: 20;
   color: rgba(10, 10, 10, 0);
   align-items: center;
   justify-content: center;
