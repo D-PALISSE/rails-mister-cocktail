@@ -5,6 +5,9 @@
     <%= f.input :name %>
     <%= f.label :image, "Image URL" %>
     <%= f.input :image, label: false %>
+    <%= f.label :photo, "Or Upload a photo" %>
+    <%= f.input :photo,label: false %>
+    <%= f.input :photo_cache, as: :hidden %>
   </div>
 
   <div class="form-actions">
