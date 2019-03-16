@@ -47,11 +47,11 @@
   border-radius: 8px;
 }
 
-#black-bg:hover {
-  a:hover {
+.card-container {
+  display: block;
+  height: 280px;
+  width: 280px;
+  background-size: 180%;
+  border-radius: 8px;
   background-color: black;
-  background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1));
-  }
-  background-color: black;
-  background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1));
 }
